@@ -13,7 +13,7 @@
 //               ▐████▌    ▐████▌
 //               ▐████▌    ▐████▌
 
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.17;
 
 /// @title WormholeTypes
 /// @notice Namespace which groups all types relevant to Wormhole interfaces.
