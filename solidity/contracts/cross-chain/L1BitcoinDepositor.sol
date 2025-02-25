@@ -15,6 +15,7 @@
 
 pragma solidity ^0.8.20;
 
+import "@keep-network/random-beacon/contracts/Reimbursable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
@@ -22,7 +23,6 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "../integrator/AbstractTBTCDepositor.sol";
 import "../integrator/IBridge.sol";
 import "../integrator/ITBTCVault.sol";
-import "./utils/Reimbursable.sol";
 import "./utils/Crosschain.sol";
 
 /// @title L1BitcoinDepositor
