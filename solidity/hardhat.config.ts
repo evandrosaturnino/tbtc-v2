@@ -14,7 +14,7 @@ import "hardhat-dependency-compiler"
 import "solidity-docgen"
 
 const ecdsaSolidityCompilerConfig = {
-  version: "0.8.17",
+  version: "0.8.20",
   settings: {
     optimizer: {
       enabled: true,
@@ -26,7 +26,7 @@ const ecdsaSolidityCompilerConfig = {
 // Reduce the number of optimizer runs to 100 to keep the contract size sane.
 // BridgeGovernance contract does not need to be super gas-efficient.
 const bridgeGovernanceCompilerConfig = {
-  version: "0.8.17",
+  version: "0.8.20",
   settings: {
     optimizer: {
       enabled: true,
@@ -53,15 +53,6 @@ export const testConfig = {
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
-      {
-        version: "0.8.17",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 1000,
-          },
-        },
-      },
       {
         version: "0.8.20",
         settings: {

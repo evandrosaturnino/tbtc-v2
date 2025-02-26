@@ -146,7 +146,7 @@ jobs:
 
       - name: Install Solidity
         env:
-          SOLC_VERSION: 0.8.17 # according to solidity.version in hardhat.config.ts
+          SOLC_VERSION: 0.8.20 # according to solidity.version in hardhat.config.ts
         run: |
           pip3 install solc-select
           solc-select install $SOLC_VERSION
