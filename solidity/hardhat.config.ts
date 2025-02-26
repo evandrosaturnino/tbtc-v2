@@ -73,6 +73,12 @@ const config: HardhatUserConfig = {
       },
     ],
     overrides: {
+      "@thesis/solidity-contracts/contracts/token/ERC20WithPermit.sol": {
+        version: "0.8.17",
+        settings: {
+          optimizer: { enabled: true, runs: 1000 },
+        },
+      },
       "@keep-network/ecdsa/contracts/WalletRegistry.sol":
         ecdsaSolidityCompilerConfig,
       "contracts/bridge/BridgeGovernance.sol": bridgeGovernanceCompilerConfig,
