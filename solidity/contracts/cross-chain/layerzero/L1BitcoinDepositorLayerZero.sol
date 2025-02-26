@@ -18,9 +18,8 @@ pragma solidity ^0.8.20;
 import {IERC20Upgradeable} from "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
 import {SafeERC20Upgradeable} from "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol";
 import {IERC20MetadataUpgradeable} from "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/IERC20MetadataUpgradeable.sol";
-
-import {IOFT, SendParam, OFTReceipt} from "@layerzerolabs/oft-evm/contracts/interfaces/IOFT.sol";
-import {MessagingReceipt, MessagingFee} from "@layerzerolabs/oapp-evm/contracts/oapp/OAppSender.sol";
+import {IOFT, SendParam, OFTReceipt} from "@threshold-network/layerzero/contracts/oft-evm/interfaces/IOFT.sol";
+import {MessagingReceipt, MessagingFee} from "@threshold-network/layerzero/contracts/oapp-evm/OAppSender.sol";
 
 import "../L1BitcoinDepositor.sol";
 

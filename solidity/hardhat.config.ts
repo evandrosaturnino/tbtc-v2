@@ -13,6 +13,16 @@ import "@typechain/hardhat"
 import "hardhat-dependency-compiler"
 import "solidity-docgen"
 
+const teste = {
+  version: "0.8.20",
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 1000,
+    },
+  },
+}
+
 const ecdsaSolidityCompilerConfig = {
   version: "0.8.17",
   settings: {
@@ -62,17 +72,45 @@ const config: HardhatUserConfig = {
           },
         },
       },
-      {
-        version: "0.8.20",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 1000,
-          },
-        },
-      },
     ],
     overrides: {
+      "contracts/test/ReimbursableImplStub.sol": teste,
+      "contracts/cross-chain/utils/IL2TBTC.sol": teste,
+      "contracts/cross-chain/L2TBTC.sol": teste,
+      "contracts/cross-chain/wormhole/L2WormholeGateway.sol": teste,
+      "contracts/cross-chain/wormhole/Wormhole.sol": teste,
+      "contracts/test/WormholeBridgeStub.sol": teste,
+      "contracts/test/TestERC20.sol": teste,
+      "contracts/cross-chain/wormhole/L1BitcoinDepositorWormhole.sol": teste,
+      "contracts/cross-chain/L2BitcoinDepositor.sol": teste,
+      "contracts/cross-chain/L1BitcoinDepositor.sol": teste,
+      "contracts/cross-chain/utils/Reimbursable.sol": teste,
+      "contracts/cross-chain/utils/ReimbursementPool.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm/OAppCore.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm/interfaces/IOAppCore.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm-upgradeable/OAppCoreUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm-upgradeable/OAppReceiverUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm/interfaces/IOAppReceiver.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm-upgradeable/OAppSenderUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm-upgradeable/OAppUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oft-evm-upgradeable/oft/OFTCoreUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oft-evm/libs/OFTComposeMsgCodec.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm/interfaces/IOAppMsgInspector.sol": teste,
+      "@threshold-network/layerzero/contracts/oft-evm/libs/OFTMsgCodec.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm-upgradeable/libs/OAppOptionsType3Upgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm/interfaces/IOAppOptionsType3.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm-upgradeable-precrime/OAppPreCrimeSimulatorUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-precrime/interfaces/IOAppPreCrimeSimulator.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-precrime/libs/Packet.sol": teste,
+      "@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/PacketV1Codec.sol": teste,
+      "@layerzerolabs/lz-evm-protocol-v2/contracts/libs/AddressCast.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-precrime/interfaces/IPreCrime.sol": teste,
+      "@threshold-network/layerzero/contracts/oft-evm-upgradeable/oft/OFTAdapterUpgradeable.sol": teste,
+      "@threshold-network/layerzero/contracts/oft-evm/interfaces/IOFT.sol": teste,
+      "@threshold-network/layerzero/contracts/oapp-evm/OAppSender.sol": teste,
+      "contracts/cross-chain/layerzero/L2MintAndBurnAdapter.sol": teste,
+      "contracts/cross-chain/layerzero/L1LockBoxAdapter.sol": teste,
+      "contracts/cross-chain/layerzero/L1BitcoinDepositorLayerZero.sol": teste,
       "@keep-network/ecdsa/contracts/WalletRegistry.sol":
         ecdsaSolidityCompilerConfig,
       "contracts/bridge/BridgeGovernance.sol": bridgeGovernanceCompilerConfig,

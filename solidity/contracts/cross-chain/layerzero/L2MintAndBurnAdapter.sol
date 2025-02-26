@@ -15,10 +15,11 @@
 
 pragma solidity ^0.8.20;
 
-import {OFTAdapterUpgradeable} from "@layerzerolabs/oft-evm-upgradeable/contracts/oft/OFTAdapterUpgradeable.sol";
-import {IERC20Metadata, IERC20} from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
-import {IL2TBTC} from "../utils/IL2TBTC.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {IERC20Metadata, IERC20} from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
+import {OFTAdapterUpgradeable} from "@threshold-network/layerzero/contracts/oft-evm-upgradeable/oft/OFTAdapterUpgradeable.sol";
+
+import {IL2TBTC} from "../utils/IL2TBTC.sol";
 
 /// @notice L2MintAndBurnAdapter uses a deployed ERC-20 token and safeERC20 to interact with the OFTCore contract.
 contract L2MintAndBurnAdapter is OFTAdapterUpgradeable {
