@@ -28,6 +28,10 @@ const config: HardhatUserConfig = {
     artifacts: "./build",
   },
 
+  dependencyCompiler: {
+    paths: ["@keep-network/tbtc-v2/contracts/Timelock.sol"],
+  },
+
   networks: {
     hardhat: {
       deploy: [
