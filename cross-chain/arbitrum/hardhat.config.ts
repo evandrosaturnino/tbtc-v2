@@ -29,7 +29,17 @@ const config: HardhatUserConfig = {
   },
 
   dependencyCompiler: {
-    paths: ["@keep-network/tbtc-v2/contracts/Timelock.sol"],
+    // the external contracts you compile
+    paths: [
+      "@keep-network/tbtc-v2/contracts/Timelock.sol",
+      // add any others you need
+    ],
+
+    // put them in the same location Slither is looking at
+    path: "contracts/hardhat-dependency-compiler",
+
+    // <—— this is the important part
+    keep: true,
   },
 
   networks: {
