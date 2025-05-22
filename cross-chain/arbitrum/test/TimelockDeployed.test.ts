@@ -41,7 +41,7 @@ describe("TimelockDeployed", () => {
 
   describe("Deployment", () => {
     it("Should deploy the contract to a valid address", async () => {
-      expect(ethers.utils.isAddress(timelockDeployed.address)).to.equal(true);
+      expect(ethers.utils.isAddress(timelockDeployed.address)).to.equal(true)
     })
 
     it("Should set the minimum delay correctly", async () => {
