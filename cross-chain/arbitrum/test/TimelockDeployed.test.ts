@@ -41,7 +41,7 @@ describe("TimelockDeployed", () => {
 
   describe("Deployment", () => {
     it("Should deploy the contract to a valid address", async () => {
-      expect(timelockDeployed.address).to.properAddress
+      expect(ethers.utils.isAddress(timelockDeployed.address)).to.equal(true);
     })
 
     it("Should set the minimum delay correctly", async () => {
@@ -57,9 +57,15 @@ describe("TimelockDeployed", () => {
       expect(hasProposerRole).to.equal(true)
     })
 
-    it("Should grant the executor role to the specified address", async () => {
+    it("Should grant the proposer role to the specified address", async () => {
       expect(
         await timelockDeployed.hasRole(PROPOSER_ROLE, proposer.address)
+      ).to.equal(true)
+    })
+
+    it("Should grant the executor role to the specified address", async () => {
+      expect(
+        await timelockDeployed.hasRole(EXECUTOR_ROLE, executor.address)
       ).to.equal(true)
     })
   })
